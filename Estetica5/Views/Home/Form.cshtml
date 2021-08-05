@@ -1,0 +1,30 @@
+﻿<div class="container">
+
+    @{
+        ViewBag.Title = "Home Page";
+
+        if (!String.IsNullOrEmpty(ViewBag.Message))
+        {
+            var message = ViewBag.Message;
+            <div class="alert alert-warning">
+                @message
+            </div>
+        }
+    }
+
+    <br /> <br /><br />
+    <h1>Iniciar sesión</h1>
+    <form action="/Admin/Index" method="post" >
+        <div class="form-group">
+            <label>Ingresa tu Id</label>
+            <input type="number" name="id" value="" />
+        </div>
+        <div class="form-group">
+            <label>Ingresa tu clave</label>
+            <input type="password" name="clave" value="" />
+        </div>
+        <div class="form-group">
+            <button>Iniciar sesión</button>
+        </div>
+    </form>
+</div>
